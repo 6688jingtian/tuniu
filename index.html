@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>途牛旅游网广告特效</title>
+		<style>
+			*{margin: 0;padding: 0;}
+			#box
+			{
+				background: url(img/f1_1.jpg) no-repeat center;
+                height: 635px;
+			}
+			.block
+			{
+				width: 990px;
+				height: 635px;
+				margin: 0 auto;
+				position: relative;
+			}
+			.f1
+			{
+				position: absolute;
+				top: 160px;
+				left: 170px;
+				z-index: 11;
+				animation: f1 5s ease infinite;
+			}
+			@keyframes f1/*关键帧动画*/
+			{
+				0%{opacity: 0;transform:scale(0);/*比例  位移  倾斜  旋转*/}
+				50%{opacity: 1;transform:scale(1.05);}
+				70%{transform:scale(.9);}
+				100%{transform:scale(1);}
+			}
+			.yun1
+			{
+				position: absolute;
+                top: 62px;
+                left: 200px;  
+                animation: yun1 5s linear infinite;                
+			}
+			@keyframes yun1
+			{
+				0%{left: 200px;}
+				50%{left: 250px;}
+				100%{left: 200px;}
+			}
+			.yun2
+			{
+				position: absolute;
+				top: 135px;
+				right:0;
+				animation: yun2 5s linear infinite;
+			}
+			@keyframes yun2
+			{
+				0%{right: 0;}
+				50%{right: 35px;}
+				100%{right: 0;}
+			}
+			.yun3
+			{
+				position: absolute;
+				top: 180px;
+				left:-70px;
+				animation: yun3 5s linear infinite;
+			}
+			@keyframes yun3
+			{
+				0%{left: -70px;}
+				50%{left: -20px;}
+				100%{right: -70px;}
+			}
+			.lu
+			{
+				position: absolute;
+				right:120px;
+				top: 90px;
+				z-index: 10;
+				animation: lu 3s linear infinite;
+				transform-origin: 0px 200px;
+			}
+			@keyframes lu
+			{
+				0%{transform: rotate(0deg);}
+				50%{transform: rotate(10deg);}
+				100%{transform: rotate(0deg);}
+			}
+			.san
+			{
+				position: absolute;
+				left:130px;
+				top:110px;
+				animation: san 3s linear infinite;
+			}
+			@keyframes san
+			{
+				0%{top: 110px;}
+				50%{top: 90px;}
+				100%{top: 110px;}
+			}
+			.box-show
+			{
+				position: absolute;
+				top: 450px;
+				left: 88px;
+			}
+			.show-1
+			{
+				position: absolute;
+                left: 0; 
+                animation: show-1 1.5s linear infinite;
+			}
+			.show-2
+			{
+				position: absolute;
+                left: 222px; 
+                animation: show-1 1s linear infinite;
+			}
+			.show-3
+			{
+				position: absolute;
+                left: 444px; 
+                animation: show-1 1.5s linear infinite;
+			}
+			.show-4
+			{
+				position: absolute;
+                left: 666px; 
+                animation: show-1 1s linear infinite;
+			}
+			@keyframes show-1
+			{
+				0%{margin-top: 0;}
+				50%{margin-top: -10px;}
+				100%{margin-top: 0;}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<div class="block">
+				<img src="img/font1.png" class="f1" />
+				<img src="img/yun1.png" class="yun1"/>
+				<img src="img/yun2.png" class="yun2"/>
+				<img src="img/yun3.png" class="yun3"/>
+				<img src="img/lu.png" class="lu"/>
+				<img src="img/san.png" class="san"/>
+				<div class="box-show">
+					<a href="javascript:;"><img src="img/1.png" class="show-1"/></a>
+					<a href="javascript:;"><img src="img/2.png" class="show-2"/></a>
+					<a href="javascript:;"><img src="img/3.png" class="show-3"/></a>
+					<a href="javascript:;"><img src="img/4.png" class="show-4"/></a>
+				</div>
+			</div>
+		</div><!--自定义动画应用-->
+	</body>
+</html>
